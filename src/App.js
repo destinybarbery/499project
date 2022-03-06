@@ -5,12 +5,13 @@ const API_URL = 'https://opentdb.com/api.php?amount=10&category=9&difficulty=eas
 function App() {
   return (
     <div className= "container">
+   
       <div>
         questions here
       </div>
       <div>
 
-        
+
       </div>
     </div>
   );
