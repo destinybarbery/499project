@@ -281,5 +281,109 @@ const questions =
               { text: "Cats", correct: false }, 
               { text: "Dolphins", correct: true },
           ], 
+        //24    
+          question: "What is the most toxic metal?",
+          answers: [
+              { text: "Copper", correct: false }, 
+              { text: "Mercury", correct: true },
+              { text: "Nickel", correct: false }, 
+              { text: "Zinc", correct: false },
+          ], 
+          //25    
+          question: "How many apples will kill a human?",
+          answers: [
+              { text: "200", correct: true }, 
+              { text: "150", correct: false },
+              { text: "100", correct: false }, 
+              { text: "250", correct: false },
+          ], 
+            //26    
+            question: "Which state has the lowest indivudual tax burden in the US?",
+            answers: [
+                { text: "NY", correct: false }, 
+                { text: "Alaska", correct: true },
+                { text: "Florida", correct: false }, 
+                { text: "Nebraska", correct: false },
+            ],
+            //27    
+            question: "Which state has the lowest indivudual tax burden in the US?",
+            answers: [
+                { text: "NY", correct: flse }, 
+                { text: "Alaska", correct: true },
+                { text: "Florida", correct: false }, 
+                { text: "Nebraska", correct: false },
+            ],
+           //28    
+            question: "What is the crows grouop known as?",
+            answers: [
+                { text: "crows-es", correct: false }, 
+                { text: "Flock", correct: false },
+                { text: "Murderer", correct: true }, 
+                { text: "Herd", correct: false },
+            ],
+            //29    
+            question: "What language has the most words?",
+            answers: [
+                { text: "Russian", correct: false }, 
+                { text: "Spanish", correct: false },
+                { text: "Chinese", correct: false }, 
+                { text: "English", correct: true },
+            ],
+            //30    
+            question: "Which of Shakespeare's plays is the longest?",
+            answers: [
+                { text: "Macbeth", correct: false }, 
+                { text: "Hamelt", correct: true },
+                { text: "King Lear", correct: false }, 
+                { text: "Romeo and Juliet", correct: false },
+            ],
+            //31    
+            question: "Who performs the character of Mark Zuckerberg in the movie 'The Social Network' ?",
+            answers: [
+                { text: "Jesse Eisenberg", correct: true }, 
+                { text: "Mark Ruffalo", correct: false },
+                { text: "Tom Cruise", correct: false }, 
+                { text: "Hugh Jackman", correct: false },
+            ],
+            //32    
+            question: "What country has the most vending machines per capita?",
+            answers: [
+                { text: "United Kingdom", correct: false }, 
+                { text: "Australia", correct: false },
+                { text: "United States", correct: false }, 
+                { text: "Japan", correct: true },
+            ],
+            //33    
+            question: "Where would you find an ISBN number?",
+            answers: [
+                { text: "Furniture", correct: false }, 
+                { text: "Phone", correct: false },
+                { text: "Book", correct: true }, 
+                { text: "Toy", correct: false },
+            ],
+            //34    
+            question: "Who sang the title song for the lastest Bond film, No Time to Die?",
+            answers: [
+                { text: "Adele", correct: false }, 
+                { text: "Billie Eillish", correct: true },
+                { text: "Sam Smith", correct: false }, 
+                { text: "Ariana Grande", correct: false },
+            ],
+            //35    
+            question: "What is the name of the festival held yearly in Chicago's Grant Park?",
+            answers: [
+                { text: "Lollapalooza", correct: true }, 
+                { text: "Fyre Fest", correct: false },
+                { text: "Gov Ball", correct: false }, 
+                { text: "EDC", correct: false },
+            ],
+            //36    
+            question: "An egg-shaped galaxy is called",
+            answers: [
+                { text: "Irregular", correct: false }, 
+                { text: "Spiral", correct: false },
+                { text: "Elliptical", correct: false }, 
+                { text: "Circular", correct: false },
+            ]
     }
 ]
