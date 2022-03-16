@@ -74,6 +74,8 @@ function selectAnswer(e)
     }
     else
     {
+
+        location.href = '/end.html';
         startButton.innerText = "Restart"
         startButton.classList.remove("hide")
     }
