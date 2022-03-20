@@ -6,6 +6,10 @@ let shuffledQuestions, currentQuestionIndex
 const answerButtonsElement = document.getElementById('answer-buttons')
 const scoreText = document.getElementById('score');
 let TEMPPOINTS = 5;
+const startingTime = 5; //for some UNKNOWN reason this shit refuses to change from 15 seconds
+let time = startingTime; 
+const countdownElement = document.getElementById('countdown')
+
 
 let score = 0;
 
@@ -16,14 +20,18 @@ nextButton.addEventListener("click",()=>{
     setNextQuestion()
 })
 
+
+
+// Starts the game
 function startGame()
 {
     console.log("Game Started");
     startButton.classList.add("hide");
-    shuffledQuestions = questions.sort(() => Math.random() - .5);
+    shuffledQuestions = questions.sort(() => Math.random() - .5); //randomly selects a question from array of questions
     currentQuestionIndex = 20;
     questionContainerElement.classList.remove("hide");
     setNextQuestion();
+
 }
 
 function setNextQuestion()
@@ -51,6 +59,7 @@ function showQuestion(question)
 
 function resetState()
 {
+    resetTimer();
     clearStatusClass(document.body)
     nextButton.classList.add("hide");
     while(answerButtonsElement.firstChild)
@@ -75,18 +84,20 @@ function selectAnswer(e)
     else
     {
 
+        
         location.href = '/end.html';
         startButton.innerText = "Restart"
         startButton.classList.remove("hide")
+        localStorage.setItem(score);
     }
-    scoreCounter(-5);
+    scoreCounter(-(5+time)); //same as below
     
 }
 
 function setStatusClass(element, isCorrect)
 {   if(isCorrect)
     {
-        scoreCounter(TEMPPOINTS);
+        scoreCounter(TEMPPOINTS+time); //this is a temporary formula, will tweak whenever
     }
     {
         element.classList.add("correct")
@@ -352,3 +363,43 @@ scoreCounter = num =>
     score +=num;
     scoreText.innerText = score;
 }
+
+setInterval(updateCountdown,1000);
+
+function updateCountdown() 
+{
+    countdownElement.innerHTML = time;
+    time--;
+    if(time == 0)
+    {
+        
+        if(shuffledQuestions.length > currentQuestionIndex+1)
+        {
+            nextButton.classList.remove("hide")
+        }
+        else
+        {
+    
+            
+            location.href = '/end.html';
+            startButton.innerText = "Restart"
+            startButton.classList.remove("hide")
+            localStorage.setItem(score);
+        }
+        currentQuestionIndex++;
+        setNextQuestion();
+        
+    }
+}
+
+function resetTimer()
+{
+    time = 15;
+    countdownElement.innerHTML = time;
+}
+
+
+
+
+
+
