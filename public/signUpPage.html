@@ -48,6 +48,72 @@
         import {getDatabase,ref,set,child,get}
             from "https://www.gstatic.com/firebasejs/9.6.9/firebase-database.js";
         const db = getDatabase();
+        
+         //references
+
+         const email = document.getElementById('emailInp');
+        const username = document.getElementById('userInp');
+        const pass = document.getElementById('passInp');
+        const submit = document.getElementById('sub_btn');
+
+        //validation
+        function Validation()
+        {
+            let emailRegex = /^[a-zA-Z0-9]+@\.(gmail|yahoo|outlook)\.com$/;
+            let userNameRegex = /^[a-zA-Z0-9]{1,16}$/;
+            if(!emailRegex.test(emailRegex.value))
+            {
+                alert("Not a valid email!");
+                return false;
+            }
+            if(!userNameRegex.test(userNameRegex.value))
+            {
+                alert("The username you have chosen is not valid!");
+                return false;
+            }
+
+            return true;
+
+        }
+
+        //register user to firebase
+
+        function RegisterUser()
+        {   
+            if(!Validation())
+            {
+                return;
+            }
+            const dbRef = ref(db);
+            get(child(dbRef,"UsersList/"+username.value)).then((snapshot)=>{
+                if(snapshot.exists())
+                {
+                    alert("User Already Exist!");
+                }
+                else
+                {
+                    set(ref(db,"UsersList/"+username.value),
+                    {
+                        email: email.value,
+                        username: username.value,
+                        password: pass.value
+                    })
+                    .then(()=>
+                    {
+                        alert("User Added Successfully");
+                    })
+                    .catch((error)=>
+                    {
+                        alert("error: " + error);
+                    })
+                }
+            });
+        }
+
+        //assigning the events
+
+        submit.addEventListener('click',RegisterUser);
+
       </script>
 </body>
 </html>
