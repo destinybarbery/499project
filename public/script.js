@@ -77,6 +77,7 @@ function selectAnswer(e)
         {
         setStatusClass(button, button.dataset.correct)
         })
+    scoreCounter(-(5+time));
     if(shuffledQuestions.length > currentQuestionIndex+1)
     {
         nextButton.classList.remove("hide")
@@ -84,13 +85,15 @@ function selectAnswer(e)
     else
     {
 
-        
+        console.log("this is score")
         location.href = '/end.html';
         startButton.innerText = "Restart"
         startButton.classList.remove("hide")
-        localStorage.setItem(score);
+        sessionStorage.setItem("mostRecentScore", score);
+        console.log(sessionStorage.getItem("mostRecentScore"))
+        //localStorage.setItem("score", score)
     }
-    scoreCounter(-(5+time)); //same as below
+     //same as below
     
 }
 
@@ -362,6 +365,7 @@ scoreCounter = num =>
 {
     score +=num;
     scoreText.innerText = score;
+    
 }
 
 setInterval(updateCountdown,1000);
