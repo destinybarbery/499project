@@ -90,8 +90,9 @@ function selectAnswer(e)
         startButton.innerText = "Restart"
         startButton.classList.remove("hide")
         //sessionStorage.setItem("mostRecentScore", score);
-        console.log(sessionStorage.getItem("mostRecentScore"))
-        localStorage.setItem("score", score)
+        
+        localStorage.setItem("mostRecentscore", score)
+        console.log(localStorage.getItem("mostRecentscore"));
     }
      //same as below
     
