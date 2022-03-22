@@ -27,7 +27,7 @@
             <input type ="checkbox" class="custom-control-input" id ="customSwitch1">
             <label class = "custom-control-label" for="customSwitch1">Keep Me Logged In</label>
         </div>
-        <button type = "text" id = "sub_btn" class = "btn w-100 btn-outline-primary mb-3">Sign Up</button>
+        <button type = "text" id = "sub_btn" class = "btn w-100 btn-outline-primary mb-3">Log In</button>
         <a href="signUpPage.html" class="badge badge-secondary py-1 w-100">Want to Create an Account?</a>
     </div>
     <script type="module">
@@ -63,16 +63,17 @@
 
         function AuthenticateUser()
         {
-            const dbref = ref(db);
+            const dbRef = ref(db);
 
             get(child(dbRef,"UsersList/"+username.value)).then((snapshot)=>{
                 
                 if(snapshot.exists())
                 {
-                   let dbpass = decPass(snapshot.val().password);
-                   if (dbpass == pas.value)
+                   let dbPass = decPass(snapshot.val().password);
+                   if (dbPass == pas.value)
                    {
                        login();
+                       console.log("logged in");
                    }
                    else
                    {
@@ -127,6 +128,8 @@
                 window.location = 'index.html';
             }
         }
+
+        submit.addEventListener('click', AuthenticateUser);
         
 
       </script>
