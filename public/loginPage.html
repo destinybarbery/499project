@@ -52,54 +52,43 @@
             from "https://www.gstatic.com/firebasejs/9.6.9/firebase-database.js";
         const db = getDatabase();
 
+
         //references
 
-        const email = document.getElementById('emailInp');
         const username = document.getElementById('userInp');
         const pass = document.getElementById('passInp');
         const submit = document.getElementById('sub_btn');
 
-        //validation
-        function Validation()
+        //authentication process
+
+        function AuthenticateUser()
         {
-            let emailRegex = /^[a-zA-Z0-9]+@\.(gmail|yahoo|outlook)\.com$/;
-            let userNameRegex = /^[a-zA-Z0-9]{1,16}$/;
-            if(!emailRegex.test(emailRegex.value))
-            {
-                alert("Not a valid email!");
-                return false;
-            }
-            if(!userNameRegex.test(userNameRegex.value))
-            {
-                alert("The username you have chosen is not valid!");
-                return false;
-            }
+            const dbref = ref(db);
 
-            return true;
-
-        }
-
-        //register user to firebase
-
-        function RegisterUser()
-        {   
-            if(!Validation())
-            {
-                return;
-            }
-            const dbRef = ref(db);
             get(child(dbRef,"UsersList/"+username.value)).then((snapshot)=>{
+                
                 if(snapshot.exists())
                 {
-                    alert("User Already Exist!");
+                   let dbpass = decPass(snapshot.val().password);
+                   if (dbpass == pas.value)
+                   {
+                       login();
+                   }
+                   else
+                   {
+                       alert("User does not exist!");
+                   }
                 }
                 else
                 {
+                    
                     set(ref(db,"UsersList/"+username.value),
                     {
+                        
                         email: email.value,
                         username: username.value,
-                        password: pass.value
+                        password: encPass()
+                        
                     })
                     .then(()=>
                     {
@@ -113,9 +102,32 @@
             });
         }
 
-        //assigning the events
+        //decryption process
+        function decPass()
+        {
+            var pass12 = CryptoJS.AES.decrypt(dbPass, pass.value);
+            return pass12.toString(CryptoJS.enc.Utf8);
+        }
 
-        submit.addEventListener('click',RegisterUser);
+        //login
+
+        function login(user)
+        {
+            let keepLoggedIn = document.getElementById('customSwitch1').checked;
+
+            if(!keepLoggedIn)
+            {
+                sessionStorage.setItem('user', JSON.stringify(user));
+                window.location = "index.html";
+            }
+            else
+            {
+                localStorage.setItem('keepLoggedIn', 'yes');
+                localStorage.setItem('user',JSON.stringify(user));
+                window.location = 'index.html';
+            }
+        }
+        
 
       </script>
 </body>

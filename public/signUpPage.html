@@ -23,7 +23,7 @@
         <h3>Sign Up</h3>
         <input type="text" placeholder="Email" id="emailInp" class ="form-control mb-3"> 
         <input type="text" placeholder="Username" id="userInp" class ="form-control mb-3"> 
-        <input type="text" placeholder="Password" id="passInp" class ="form-control mb-3"> 
+        <input type="password" placeholder="Password" id="passInp" class ="form-control mb-3"> 
         <button type = "text" id = "sub_btn" class = "btn w-100 btn-outline-primary mb-3">Sign Up</button>
         <a href="loginPage.html" class="badge badge-secondary py-1 w-100">Already Have An Account?</a>
     </div>
@@ -51,21 +51,34 @@
         
          //references
 
-         const email = document.getElementById('emailInp');
+        const email = document.getElementById('emailInp');
         const username = document.getElementById('userInp');
         const pass = document.getElementById('passInp');
         const submit = document.getElementById('sub_btn');
 
         //validation
+
+        function isEmptyOrSpaces(str)
+        {
+            return str == null || str.match(/^ *$/) !== null;
+        }
+
         function Validation()
         {
-            let emailRegex = /^[a-zA-Z0-9]+@\.(gmail|yahoo|outlook)\.com$/;
+            let emailRegex = /^[a-zA-Z0-9]+@(gmail|yahoo|outlook)\.com$/;
             let userNameRegex = /^[a-zA-Z0-9]{1,16}$/;
-            if(!emailRegex.test(emailRegex.value))
+            if(isEmptyOrSpaces(username.value) || isEmptyOrSpaces(email.value)
+            || isEmptyOrSpaces(pass.value))
+            {
+                alert("You cannot leave any field empty!");
+                return false;
+            }
+            if(!emailRegex.test(email.value))
             {
                 alert("Not a valid email!");
                 return false;
             }
+
             if(!userNameRegex.test(userNameRegex.value))
             {
                 alert("The username you have chosen is not valid!");
@@ -80,23 +93,30 @@
 
         function RegisterUser()
         {   
+            
             if(!Validation())
             {
+                console.log("123");
                 return;
             }
+            
             const dbRef = ref(db);
             get(child(dbRef,"UsersList/"+username.value)).then((snapshot)=>{
+                
                 if(snapshot.exists())
                 {
                     alert("User Already Exist!");
                 }
                 else
                 {
+                    
                     set(ref(db,"UsersList/"+username.value),
                     {
+                        
                         email: email.value,
                         username: username.value,
-                        password: pass.value
+                        password: encPass()
+                        
                     })
                     .then(()=>
                     {
@@ -108,6 +128,14 @@
                     })
                 }
             });
+        }
+
+        //password encryption
+
+        function encPass()
+        {
+            var pass12 = CryptoJS.AES.encrypt(pass.value, pass.value);
+            return pass12.toString();
         }
 
         //assigning the events
