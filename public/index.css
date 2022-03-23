@@ -15,6 +15,7 @@
     grid-template-columns: 50vw 50vw;
     grid-template-rows: 100vh;
     grid-template-areas: "buttons logo";
+    background-image: url(back.png);
 }
 
 .logo-container{
@@ -32,8 +33,9 @@
     padding-bottom: 60px;
     padding-right: 60px;
     padding-left: 60px;
-}
 
+
+}
 
 .button-container{
     grid-area: buttons;
@@ -60,8 +62,8 @@
     box-shadow: 10px 10px 10px 10px #EBF56C;
 }
 
-.button:hover{
-    background: pink;
+.btn:hover{
+    background:#FF39BA;
 }
 
 .button:active {
