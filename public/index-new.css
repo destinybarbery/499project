@@ -1,5 +1,5 @@
 :root {
-    background-color:#ddded1;
+    background-color: #c18c36;
     font-size: 62.5%;
 }
 
@@ -15,7 +15,7 @@
     grid-template-columns: 50vw 50vw;
     grid-template-rows: 100vh;
     grid-template-areas: "buttons logo";
-    background-image: url(back.png);
+    background-image: url(background-new.png);
 }
 
 .logo-container{
@@ -46,15 +46,15 @@
 }
 
 .btn {
-    background:#617DC2;
-    padding: 40px 150px 40px 150px;
+    background:#8a8a8a;
+    padding: 40px 180px 40px 180px;
     border: none;
     border-radius: 300px;
     overflow: hidden;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: white;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 50px;
     font-weight: 800;
     cursor: pointer;
     margin-top: 20px;
@@ -63,7 +63,7 @@
 }
 
 .btn:hover{
-    background:#FF39BA;
+    background:rgb(133, 146, 222);
 }
 
 .button:active {
