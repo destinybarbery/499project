@@ -21,8 +21,8 @@
 <body>
     <div class = "mb-3">
         <h3>Login</h3>
-        <input type="text" placeholder="Username" id="userInp" class ="form-control mb-3"> 
-        <input type="text" placeholder="Password" id="passInp" class ="form-control mb-3"> 
+        <input type="text" placeholder="Email Address" id="emailInp" class ="form-control mb-3"> 
+        <input type="password" placeholder="Password" id="passInp" class ="form-control mb-3"> 
         <div class="custom-control custom-switch">
             <input type ="checkbox" class="custom-control-input" id ="customSwitch1">
             <label class = "custom-control-label" for="customSwitch1">Keep Me Logged In</label>
@@ -50,14 +50,12 @@
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
 
-        import {getDatabase,ref,set,child,get}
-            from "https://www.gstatic.com/firebasejs/9.6.9/firebase-database.js";
-        const db = getDatabase();
+
 
 
         //references
 
-        const username = document.getElementById('userInp');
+        const email = document.getElementById('emailInp');
         const pass = document.getElementById('passInp');
         const submit = document.getElementById('sub_btn');
 
@@ -65,6 +63,15 @@
 
         function AuthenticateUser()
         {
+            const emailData = email.value
+            const passData = pass.value
+            signInWithEmailAndPassword(auth,emailData,passData)
+            .then((userCredential) =>
+            {
+                const userData = userCredential.userData;
+                console.log("logged in");
+                window.location = "index.html"
+            });
 
         }
 

@@ -6,7 +6,8 @@
         <meta http-equiv = "X-UA-Compatible" content = "ie=edge"/>
         <title>YAY...HOWD YOU DO?</title>
         <link rel= "stylesheet" href="App.css"/>
-        <link rel= "stylesheet" href="index.css" />
+        <link rel= "stylesheet" href="index.css"/>
+        <script defer src="end.js"></script>
 
     </head>
     <body>
@@ -20,19 +21,13 @@
                     id="username"
                     placeholder="username"
                     >/
-                    <button
-                    type="submit"
-                    class="btn"
-                    id="saveScoreBtn"
-                    onclick="saveHighScore(event)"
-                    >
-                    Save
-                    </button>
+                    <button id="save-button" class="save-button button">Save</button>
                 </form>
                 <a class="btn" href="gamePage.html">Play again?</a>
                 <a class="btn" href="/">Go home</a> 
             </div>
         </div>
-        <script src = "end.js"></script>
+        
+        
     </body>
 </html>
