@@ -6,6 +6,8 @@ const saveButton = document.getElementById("save-button");
 
 
 
+
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-app.js";
 import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore.js";
 
@@ -37,15 +39,15 @@ username.addEventListener("keyup", () => {
 
 saveButton.addEventListener("click",saveHighScore)
 
-function saveHighScore()  // !!!!!!! i continue from here when i get home !!!!!!!!!!
+function saveHighScore(e)  // !!!!!!! i continue from here when i get home !!!!!!!!!!
 {
     console.log("clicked the save button!");
     e.preventDefault();
 
-    addDoc(colRef,{
+    addDoc(collectionRef,{
         mode: "regular",
         name: username.value,
-        score: finalScore.value
+        score: mostRecentScore
     })
     .then(() =>{
         console.log("score successfully saved")
