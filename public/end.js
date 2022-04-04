@@ -39,7 +39,7 @@ username.addEventListener("keyup", () => {
 
 saveButton.addEventListener("click",saveHighScore)
 
-function saveHighScore(e)  // !!!!!!! i continue from here when i get home !!!!!!!!!!
+function saveHighScore(e)  
 {
     console.log("clicked the save button!");
     e.preventDefault();

@@ -1,6 +1,11 @@
 
+const highScoresList = document.getElementById('highScoresList')
+let scores = []
+
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-app.js";
-import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore.js";
+import { getFirestore, where, onSnapshot, collection, addDoc, getDocs, orderBy, query } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore.js";
+
 
 const firebaseConfig = 
 {
@@ -22,17 +27,43 @@ const db = getFirestore()
 //reference firestore database
 const collectionRef = collection(db, 'scores')
 
-getDocs(collectionRef)
-    .then((snapshot)=> {
-        let scores = []
-        snapshot.docs.forEach((doc) =>
-        {
-            scores.push({ ...doc.data(), id: doc.id })
-        })
-        console.log(scores)
-    }) 
-    .catch(err =>
-        {
-            console.log(err.message)
-        })
+//query
+const q = query(collectionRef, orderBy('score','desc'))
+
+
+onSnapshot(q,(snapshot)=>
+{
+    let scores = []
+    snapshot.docs.forEach((doc) =>
+    {
+        scores.push({...doc.data(), id: doc.id })
+    })
+    buildTable(scores)
+    console.log(scores)
+})
+
+
+
+        //console.log(scores)
+    
+
+function buildTable(data)
+{
+    var table = document.getElementById('myTable')
+    for(var i = 0;i<data.length;i++)
+    { 
+        var temp = i+1;
+        var row = `<tr>
+            <td>${temp}</td>
+            <td>${data[i].name}</td>
+            <td>${data[i].score}</td>
+        </tr>`
+        
+        
+        
+        table.innerHTML += row
+        console.log("table created")
+    }
+}
+
 
