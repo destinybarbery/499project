@@ -131,233 +131,243 @@ const questions =
 [
     {
           //1
-        question: "How many teeth does a dog have?",
+        question: "What was the fist item sent through NYC's post office pneumatic tube?",
         answers: [
-            { text: '28', correct: true },
-            { text: "29", correct: false }, 
-            { text: '32', correct: false },
-            { text: "12", correct: false }
+            { text: 'a cat', correct: true },
+            { text: "a person", correct: false }, 
+            { text: 'a burger', correct: false },
+            { text: "a pen", correct: false }
         ]
     },
         //2
     {
-        question: "What European country has 158 verses to its anthem?",
+        question: "You're how many times more likely to be bitten by a New Yorker than a shark?",
         answers: [
-            { text: "Germany", correct: false }, 
-            { text: "Ireland", correct: false },
-            { text: "Monaco", correct: false }, 
-            { text: "Greece", correct: true }
+            { text: "0", correct: false }, 
+            { text: "12", correct: false },
+            { text: "10", correct: true }, 
+            { text: "2", correct: false }
         ]
     },
         //3
     {
-        question: "What is the oddest name of a town located in norway?",
+        question: "The population of New York exceeds that of how many states?",
         answers: [
-            { text: "Normal", correct: false }, 
-            { text: "Ireland", correct: false },
-            { text: "Monaco", correct: false }, 
-            { text: "Greece", correct: true }
+            { text: "12", correct: false }, 
+            { text: "49", correct: false },
+            { text: "22", correct: false }, 
+            { text: "39", correct: true }
         ]
     },
         //4
     {
-        question: "What food could turn your skin color orange throughout your body?",
+        question: "What food made its debut in New York?",
         answers: [
-            { text: "Cantaloupe", correct: false }, 
-            { text: "Butternut squash", correct: false },
-            { text: "Carrots", correct: true }, 
-            { text: "Sweet potatoes", correct: false }
+            { text: "hotdogs", correct: false }, 
+            { text: "carrot cake", correct: false },
+            { text: "ice cream cones", correct: true }, 
+            { text: "cheesecake", correct: false }
         ]
     },
         //5
     {
-        question: "How fast was the first person ever convicted of speeding?",
+        question: "What weird law is actually true?",
         answers: [
-            { text: "13 mph", correct: false }, 
-            { text: "8 mph", correct: true },
-            { text: "70 mph", correct: false }, 
-            { text: "85 mph", correct: false }
+            { text: "you cannot walk your dog near a church on sundays", correct: false }, 
+            { text: "farting in church is a misdemeanor", correct: true },
+            { text: "You must be 5'8+ to drive a train", correct: false }, 
+            { text: "Cats must all be registered to keep track of their population", correct: false }
         ]
     },
         //6
     {
-        question: "On Sunday what is illegal to sell in Columbus, Ohio?",
+        question: "What was Times Square originally called?",
         answers: [
-            { text: "Cornflakes", correct: true }, 
-            { text: "Apples", correct: false },
-            { text: "Red meat", correct: false }, 
-            { text: "Orange juice", correct: false }
+            { text: "Longacre Square", correct: true }, 
+            { text: "Times center", correct: false },
+            { text: "Union Sqaure", correct: false }, 
+            { text: "Always been called Times Sqaure", correct: false }
         ]
     },
         //7
     {
-        question: "On Sunday what is illegal to sell in Columbus, Ohio?",
+        question: "Whose eyeballs are stored in the city??",
         answers: [
-            { text: "Cornflakes", correct: true }, 
-            { text: "Apples", correct: false },
-            { text: "Red meat ", correct: false }, 
-            { text: "Orange juice", correct: false }
+            { text: "Albert Einstein", correct: true }, 
+            { text: "Walt Disney", correct: false },
+            { text: "John Lennon", correct: false }, 
+            { text: "Michael Jackson", correct: false }
         ]
     },
         //8
     {
-        question: "Who said 'Champagne should be dry, cold and free'?",
+        question: "How much did New York sell a private Island for in 1975?",
         answers: [
-            { text: "JFK", correct: false }, 
-            { text: "Joseph Stalin", correct: false },
-            { text: "Winstom Churchill", correct: true }, 
-            { text: "MLK", correct: false }
+            { text: "$18", correct: false }, 
+            { text: "$55", correct: false },
+            { text: "$10", correct: true }, 
+            { text: "$276", correct: false }
         ]
     },
         //9
     {
-        question: " What sport has been played on the moon?",
+        question: "How often is there a birth in NYC?",
         answers: [
-            { text: "Tennis", correct: false }, 
-            { text: "Golf", correct: true },
-            { text: "Ping Pong", correct: false }, 
-            { text: "Basketball", correct: false }
+            { text: "every 2 minutes", correct: false }, 
+            { text: "every 4.4 minutes", correct: true },
+            { text: "every 5.7 minutes", correct: false }, 
+            { text: "every 15 seconds", correct: false }
         ]
     },
         //10
     {
-        question: " What sport has been played onFrom which country do French fries originate?",
+        question: "What is it not illegal to do in NYC?",
         answers: [
-            { text: "France", correct: false }, 
-            { text: "Switzerland", correct: false },
-            { text: "Italy", correct: false }, 
-            { text: "Belgium", correct: true }
+            { text: "Scam", correct: false }, 
+            { text: "litter", correct: false },
+            { text: "do coke", correct: false }, 
+            { text: "go topless", correct: true }
         ]
     },
         //11
     {
-        question: "The average person does what thirteen times a day?",
+        question: "How often does the Empire State building get hit by lightning?",
         answers: [
-            { text: "Smiles", correct: false }, 
-            { text: "Crys", correct: false },
-            { text: "Laughs", correct: true }, 
-            { text: "Frowns", correct: false }
+            { text: "52 times a year", correct: false }, 
+            { text: "2 times a year", correct: false },
+            { text: "23 times a year", correct: true }, 
+            { text: "102 times a year", correct: false }
         ]
     },
         //12
     {
-        question: "What is 'cynophobia?",
+        question: "What is the average rent for one bedroom apartment in manhattan?",
         answers: [
-            { text: "fear of dogs", correct: true }, 
-            { text: "fear of trains", correct: false },
-            { text: "fear of cynics", correct: false }, 
-            { text: "fear of cantelope", correct: false }
+            { text: "3400", correct: true }, 
+            { text: "5500", correct: false },
+            { text: "1250", correct: false }, 
+            { text: "6400", correct: false }
         ]
     },
         //13
     {
-        question: "How many questions are written by right to left?",
+        question: "What can be found in NYC's drinking water?",
         answers: [
-            { text: "15", correct: false }, 
-            { text: "4", correct: false },
-            { text: "12", correct: true }, 
-            { text: "8", correct: false }
+            { text: "nothing", correct: false }, 
+            { text: "mice", correct: false },
+            { text: "small crustaceans", correct: true }, 
+            { text: "roaches", correct: false }
         ]
     },
         //14
     {
-        question: "What animal can be seen on the Porsche logo?",
+        question: "New Yorkers can request for what to be put in front of their home for free?",
         answers: [
-            { text: "Lion", correct: false }, 
-            { text: "Ram", correct: false },
-            { text: "Tiger", correct: false }, 
-            { text: "Horse", correct: true }
+            { text: "A water fountain", correct: false }, 
+            { text: "A trash can", correct: false },
+            { text: "A statue", correct: false }, 
+            { text: "A tree", correct: true }
         ]
     },
          //15
         {
-         question: "What is the rarest M&M color?",
+         question: "How many books is the New York public Libary home to?",
          answers: [
-             { text: "Green", correct: false }, 
-             { text: "Brown", correct: true },
-             { text: "Red", correct: false }, 
-             { text: "Orange", correct: false }
+             { text: "600,000", correct: false }, 
+             { text: "50 million", correct: true },
+             { text: "2 million", correct: false }, 
+             { text: "15 million", correct: false }
          ]
         },
         //16
     {
-         question: "'Hendricks', 'Larios', and 'Seagram's' are some of the best selling brands of which spirit?",
+         question: "What was New York originnally named",
              answers: [
-                 { text: "Tequila", correct: false }, 
-                 { text: "Vodka", correct: false },
-                 { text: "Gin", correct: true }, 
-                 { text: "Rum", correct: false }
+                 { text: "Yorkville", correct: false }, 
+                 { text: "New England", correct: false },
+                 { text: "New Amsterdam", correct: true }, 
+                 { text: "Jersey", correct: false }
              ]
     },
         //17
     {
-        question: "In what year were the first Air Jordan sneakers released?",
+        question: "How many languages are spoken in NYC?",
         answers: [
-            { text: "1984", correct: true }, 
-            { text: "1980", correct: false },
-            { text: "1996", correct: false }, 
-            { text: "1991", correct: false }
+            { text: "800", correct: true }, 
+            { text: "1,000", correct: false },
+            { text: "529", correct: false }, 
+            { text: "62", correct: false }
         ],
     },
         //18
     {
-        question: "Which two U.S. states do not observe Daylight Saving Time?",
+        question: "Which borough is the most populated?",
         answers: [
-            { text: "NY and NJ", correct: false }, 
-            { text: "Arizona and Hawaii", correct: true },
-            { text: "California and Oregon", correct: false }, 
-            { text: "Alaska and Hawaii", correct: false }
+            { text: "Manhattan", correct: false }, 
+            { text: "Brooklyn", correct: true },
+            { text: "Queens", correct: false }, 
+            { text: "The Bronx", correct: false }
         ]
     },
           //19
         {
-          question: "What color eyes do most humans have?",
+          question: "How much did the dutch have to pay to aquire Manhattan",
           answers: [
-              { text: "Blue", correct: false }, 
-              { text: "Amber", correct: false },
-              { text: "Brown", correct: true }, 
-              { text: "Green", correct: false }
+              { text: "1 million dollars", correct: false }, 
+              { text: "$52,000", correct: false },
+              { text: "$1000", correct: true }, 
+              { text: "$50", correct: false }
           ]
         },
         //20
         {
-          question: "Water has a pH level of around?",
+          question: "Brown street signs in NYC mean what?",
           answers: [
-              { text: "7", correct: true }, 
-              { text: "3", correct: false },
-              { text: "2", correct: false }, 
-              { text: "6", correct: false }
+              { text: "You are in a historic district", correct: true }, 
+              { text: "There are no trains near by", correct: false },
+              { text: "They ran out of green signs", correct: false }, 
+              { text: "there is a sewer system center beneath the ground", correct: false }
           ] 
         },
           //21
         {
-          question: "What is Harry Potter's Patronus?",
+          question: "What is a medallion referring to in NYC?",
           answers: [
-              { text: "boar", correct: false }, 
-              { text: "Cat", correct: false },
-              { text: "Stag", correct: true }, 
-              { text: "Doe", correct: false }
+              { text: "award given by the city", correct: false }, 
+              { text: "award given by the state", correct: false },
+              { text: "license to drive a taxi cab", correct: true }, 
+              { text: "license to operate a train", correct: false }
           ] 
         },
           //22    
         {
-          question: "What is Harry Potter's Patronus?",
+          question: "How much does it cost to operate a hotdog stand?",
           answers: [
-              { text: "boar", correct: false }, 
-              { text: "Cat", correct: false },
-              { text: "Stag", correct: true }, 
-              { text: "Doe", correct: false }
+              { text: "25,000", correct: false }, 
+              { text: "15,000", correct: false },
+              { text: "150,000", correct: true }, 
+              { text: "500,000", correct: false }
           ]   
         },
           //23    
         {
-          question: "Which animal sleep with one eye open?",
+          question: "How much does the Naked Cowboy make annually?",
           answers: [
-              { text: "Birds", correct: false }, 
-              { text: "Turtles", correct: false },
-              { text: "Cats", correct: false }, 
-              { text: "Dolphins", correct: true }
+              { text: "50,000", correct: false }, 
+              { text: "12,000", correct: false },
+              { text: "85,0000", correct: false }, 
+              { text: "150,000", correct: true }
           ]
+        },
+        //24
+        {
+            question: "New York has the largest population of what ethnic group in the United States",
+            answers: [
+                { text: "Greek", correct: false }, 
+                { text: "Puerto Rican", correct: false },
+                { text: "Asian", correct: false }, 
+                { text: "All of the above", correct: true }
+            ]
         },
     
 ]
