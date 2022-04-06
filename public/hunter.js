@@ -86,7 +86,7 @@ function selectAnswer(e)
     {
 
         console.log("this is score")
-        location.href = '/end.html';
+        location.href = '/hunterEnd.html';
         startButton.innerText = "Restart"
         startButton.classList.remove("hide")
         //sessionStorage.setItem("mostRecentScore", score);

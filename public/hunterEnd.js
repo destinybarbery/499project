@@ -1,8 +1,8 @@
 const username = document.getElementById("username");
-const saveScoreBtn = document.getElementById("saveScoreBtn");
+const saveScoreBtn = document.getElementById("save-button");
 const finalScore = document.getElementById("FinalScore");
 const mostRecentScore = localStorage.getItem("mostRecentscore");
-const saveButton = document.getElementById("save-button");
+
 
 
 
@@ -29,15 +29,15 @@ initializeApp(firebaseConfig)
 const db = getFirestore()
 
 //reference firestore database
-const collectionRef = collection(db, 'scores')
+const collectionRef = collection(db, 'hunterScores')
 
 
 finalScore.innerText = mostRecentScore;
 username.addEventListener("keyup", () => {
-    //save-button.disabled = !username.ariaValueMax;
+    saveScoreBtn.disabled = !username.ariaValueMax;
 });
 
-saveButton.addEventListener("click",saveHighScore)
+saveScoreBtn.addEventListener("click",saveHighScore)
 
 function saveHighScore(e)  
 {
@@ -45,7 +45,7 @@ function saveHighScore(e)
     e.preventDefault();
 
     addDoc(collectionRef,{
-        mode: "regular",
+        mode: "hunter",
         name: username.value,
         score: mostRecentScore
     })

@@ -1,6 +1,4 @@
 
-
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-app.js";
 import { getFirestore, where, onSnapshot, collection, addDoc, getDocs, orderBy, query } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore.js";
 
@@ -23,7 +21,7 @@ initializeApp(firebaseConfig)
 const db = getFirestore()
 
 //reference firestore database
-const collectionRef = collection(db, 'scores')
+const collectionRef = collection(db, 'hunterScores')
 
 //query
 const q = query(collectionRef, orderBy('score','desc'))
@@ -36,17 +34,10 @@ onSnapshot(q,(snapshot)=>
     {
         scores.push({...doc.data(), id: doc.id })
     })
-    
-    
     buildTable(scores)
     console.log(scores)
 })
-
-
-
-        //console.log(scores)
-    
-
+ 
 function buildTable(data)
 {
     var table = document.getElementById('myTable')
@@ -65,6 +56,3 @@ function buildTable(data)
         console.log("table created")
     }
 }
-
-
-
