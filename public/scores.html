@@ -8,7 +8,7 @@
         content="ie-edge" />
         <title>High Scores</title>
         <script type="module" src="./scores.js" ></script>
-        <link rel="stylesheet" href="./styles.css" />
+        <link rel="stylesheet" href="stylesHighScore.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         
     </head>
@@ -16,12 +16,11 @@
         <div class="container">
             <div id="highScores" class="flex-center flex-column">
                 <h1 id="finalScore">High Scores</h1>
-                <ul id="highScoresList"></ul>
-                <a class="btn" href="/">Go home</a>
-                
+                <ul id="highScoresList"></ul>   
             </div>
         </div>
-
+        <a class="btn" href="/"> 
+            Go home</a>
         <table class = "table table-striped">
             <tr class="bg-info">
                 <th>Rank</th>
@@ -32,6 +31,8 @@
 
             </tbody>
         </table>
+
+       
         
         
     </body>

@@ -5,22 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In Page</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-    <style>
-        body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            width: 100vw;
-            margin: 0px;
-        }
-    </style>
+    <link rel="stylesheet" href="login.css" /> 
+    <script src="login.js"></script>
 </head>
 <body>
+
     <div class = "mb-3">
-        <h3>Login</h3>
+
+        <h1>Login</h1>
         <input type="text" placeholder="Email Address" id="emailInp" class ="form-control mb-3"> 
         <input type="password" placeholder="Password" id="passInp" class ="form-control mb-3"> 
         <div class="custom-control custom-switch">
@@ -28,82 +20,9 @@
             <label class = "custom-control-label" for="customSwitch1">Keep Me Logged In</label>
         </div>
         <button type = "text" id = "sub_btn" class = "btn w-100 btn-outline-primary mb-3">Log In</button>
-        <a href="signUpPage.html" class="badge badge-secondary py-1 w-100">Want to Create an Account?</a>
+       <a href="signUpPage.html" class="badge badge-secondary py-1 w-100">Want to Create an Account?</a> </div>
+
     </div>
-    <script type="module">
-        // firebase config
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-app.js";
-        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-auth.js";
-        
-
-        const firebaseConfig = {
-          apiKey: "AIzaSyCsi7k_Qf_Rubmx5fmQnXmP1eGosKqYbEA",
-          authDomain: "quizapp-d375c.firebaseapp.com",
-          databaseURL: "https://quizapp-d375c-default-rtdb.firebaseio.com",
-          projectId: "quizapp-d375c",
-          storageBucket: "quizapp-d375c.appspot.com",
-          messagingSenderId: "102216189713",
-          appId: "1:102216189713:web:3ee38fb0f5c3c5b9b7eeb0"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-
-
-
-
-        //references
-
-        const email = document.getElementById('emailInp');
-        const pass = document.getElementById('passInp');
-        const submit = document.getElementById('sub_btn');
-
-        //authentication process
-
-        function AuthenticateUser()
-        {
-            const emailData = email.value
-            const passData = pass.value
-            signInWithEmailAndPassword(auth,emailData,passData)
-            .then((userCredential) =>
-            {
-                const userData = userCredential.userData;
-                console.log("logged in");
-                window.location = "index.html"
-            });
-
-        }
-
-        //decryption process
-        function decPass()
-        {
-            var pass12 = CryptoJS.AES.decrypt(dbPass, pass.value);
-            return pass12.toString(CryptoJS.enc.Utf8);
-        }
-
-        //login
-
-        function login(user)
-        {
-            let keepLoggedIn = document.getElementById('customSwitch1').checked;
-
-            if(!keepLoggedIn)
-            {
-                sessionStorage.setItem('user', JSON.stringify(user));
-                window.location = "index.html";
-            }
-            else
-            {
-                localStorage.setItem('keepLoggedIn', 'yes');
-                localStorage.setItem('user',JSON.stringify(user));
-                window.location = 'index.html';
-            }
-        }
-
-        submit.addEventListener('click', AuthenticateUser);
-        
-
-      </script>
+    
 </body>
 </html>
