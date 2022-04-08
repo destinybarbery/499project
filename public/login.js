@@ -1,7 +1,7 @@
 
         // firebase config
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-app.js";
-        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-auth.js";
+        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-auth.js";
         
 
         const firebaseConfig = {
@@ -72,3 +72,7 @@
         submit.addEventListener('click', AuthenticateUser);
         
 
+onAuthStateChanged(auth,(user)=>
+{
+    console.log("user status changed: ", user)
+})
