@@ -38,7 +38,7 @@
             {
                 const userData = userCredential.userData;
                 console.log("logged in");
-                window.location = "index.html"
+                window.location = "indexSignedIn.html"
             });
 
         }
