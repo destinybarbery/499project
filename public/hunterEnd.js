@@ -33,9 +33,9 @@ const collectionRef = collection(db, 'hunterScores')
 
 
 finalScore.innerText = mostRecentScore;
-username.addEventListener("keyup", () => {
-    saveScoreBtn.disabled = !username.ariaValueMax;
-});
+//username.addEventListener("keyup", () => {
+    //saveScoreBtn.disabled = !username.ariaValueMax;
+//});
 
 saveScoreBtn.addEventListener("click",saveHighScore)
 
