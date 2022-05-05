@@ -28,7 +28,7 @@ function startGame()
     console.log("Game Started");
     startButton.classList.add("hide");
     shuffledQuestions = questions.sort(() => Math.random() - .5); //randomly selects a question from array of questions
-    currentQuestionIndex = 20;
+    currentQuestionIndex = shuffledQuestions.length - 10;
     questionContainerElement.classList.remove("hide");
     setNextQuestion();
 

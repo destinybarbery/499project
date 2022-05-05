@@ -1,7 +1,7 @@
 
         // firebase config
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-app.js";
-        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-auth.js";
+        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-auth.js";
         
 
         const firebaseConfig = {
@@ -19,6 +19,8 @@
         const auth = getAuth(app);
 
 
+
+        signOut(auth)
 
 
         //references
@@ -38,7 +40,7 @@
             {
                 const userData = userCredential.userData;
                 console.log("logged in");
-                window.location = "index.html"
+                window.location = "indexSignedIn.html"
             });
 
         }
