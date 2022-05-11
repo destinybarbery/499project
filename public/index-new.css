@@ -67,7 +67,7 @@
 }
 
 .button:active {
-    background: pink;
+    background: rgb(192, 219, 255);
 }
 
 
