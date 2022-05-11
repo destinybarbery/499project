@@ -359,6 +359,142 @@ const questions =
               { text: "Dolphins", correct: true }
           ]
         },
+        {
+            question: "How long is the shortest commercial flight?",
+            answers: [
+                { text: "2 minutes", correct: false }, 
+                { text: "5 minutes", correct: false },
+                { text: "17 minutes", correct: false }, 
+                { text: "57 seconds", correct: true }
+            ]
+          },
+          {
+            question: "What did victorians use to predict the weather",
+            answers: [
+                { text: "the sun", correct: false }, 
+                { text: "leeches", correct: true },
+                { text: "birds", correct: false }, 
+                { text: "groundhogs", correct: false }
+            ]
+          },
+          {
+            question: "How long will the average person spend waiting for red lights to turn green?",
+            answers: [
+                { text: "4 days", correct: false }, 
+                { text: "5 weeks", correct: false },
+                { text: "17 months", correct: false }, 
+                { text: "6 months", correct: true }
+            ]
+          },
+          {
+            question: "What is the fear of being happy called",
+            answers: [
+                { text: "Arachnophobia", correct: false }, 
+                { text: "Cherophobia", correct: true},
+                { text: "Smiphobia", correct: false }, 
+                { text: "Trypophobia", correct: true }
+            ]
+          },
+          {
+            question: "Which animal sleep with one eye open?",
+            answers: [
+                { text: "Birds", correct: false }, 
+                { text: "Turtles", correct: false },
+                { text: "Cats", correct: false }, 
+                { text: "Dolphins", correct: true }
+            ]
+          },
+          {
+            question: "One in three divorce filings have what word?",
+            answers: [
+                { text: "Cheating", correct: false }, 
+                { text: "Children", correct: false },
+                { text: "Money", correct: false }, 
+                { text: "Facebook", correct: true }
+            ]
+          },
+          {
+            question: "What did victorians say when taking pictures?",
+            answers: [
+                { text: "Prunes", correct: true }, 
+                { text: "Smile", correct: false },
+                { text: "Cheese", correct: false }, 
+                { text: "Teeth", correct: false }
+            ]
+          },
+          {
+            question: "What country imports criminals to fill its jails?",
+            answers: [
+                { text: "Germany", correct: false }, 
+                { text: "Switzerland", correct: false },
+                { text: "Netherlands", correct: true }, 
+                { text: "America", correct: false }
+            ]
+          },
+          {
+            question: "What tech company had its own clothing line?",
+            answers: [
+                { text: "T-mobile", correct: false }, 
+                { text: "Apple", correct: true },
+                { text: "Verizon", correct: false }, 
+                { text: "IBM", correct: false }
+            ]
+          },
+          {
+            question: "What is the most widely printed book in history?",
+            answers: [
+                { text: "The dictionary", correct: false }, 
+                { text: "The bible", correct: false },
+                { text: "Ikea catalog", correct: true }, 
+                { text: "Harry Potter", correct: false }
+            ]
+          },
+          {
+            question: "What causes the cracking sound your joints make?",
+            answers: [
+                { text: "Your bones rubbing together", correct: false }, 
+                { text: "Gasses being release", correct: true },
+                { text: "Nerves breaking", correct: false }, 
+                { text: "Bones breaking", correct: false }
+            ]
+          },
+          {
+            question: "What shape are goats pupils?",
+            answers: [
+                { text: "Triangle", correct: false }, 
+                { text: "Rhombus", correct: false },
+                { text: "Rectangle", correct: true }, 
+                { text: "Dolphins", correct: false }
+            ]
+          },
+          {
+            question: "Mcdonalds once tried to sell?",
+            answers: [
+                { text: "Cotton Candy", correct: false }, 
+                { text: "Bubble gum flavored broccoli", correct: true },
+                { text: "Carrots", correct: false }, 
+                { text: "Sweet potato fries", correct: false }
+            ]
+          },
+          {
+            question: "What chip is flammable and can be used for kindling?",
+            answers: [
+                { text: "Doritios", correct: true }, 
+                { text: "Lays", correct: false },
+                { text: "Ruffles", correct: false }, 
+                { text: "Cheetos", correct: false }
+            ]
+          },
+          {
+            question: "What was used as bandages in ancient times?",
+            answers: [
+                { text: "Papyrus", correct: false }, 
+                { text: "Leaves", correct: false },
+                { text: "Animal skin", correct: false }, 
+                { text: "Spiderwebs", correct: true }
+            ]
+          },
+        
     
 ]
 
